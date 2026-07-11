@@ -1,46 +1,51 @@
-.daily-container {
-  margin: 1rem 0;
+.upcoming-days {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  max-width: 75%;
-
-  padding: 1rem;
+  gap: 10px;
 }
 
-.daily-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.75rem 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  color: #f1f1f1;
-  font-size: 0.95rem;
-}
-
-.daily-day {
-  flex: 2;
-}
-.daily-rain,
-.daily-temp {
-  flex: 1;
-}
-
-.daily-temp {
-  text-align: right;
-}
-
-.daily-condition {
+.upcoming-day-card {
   display: flex;
   align-items: center;
-  flex: 1;
-  gap: 0.5rem;
+  justify-content: space-between;
+  background: var(--panel-dark);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 14px 16px;
 }
-.daily-icon {
-  width: 30px;
-  height: 30px;
+
+.upcoming-day-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
-.daily-text {
-  font-size: 0.85rem;
+
+.upcoming-day-country {
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.upcoming-day-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.upcoming-day-condition {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.upcoming-day-temp {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.upcoming-day-icon {
+  width: 26px;
+  height: 26px;
 }

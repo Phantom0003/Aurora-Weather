@@ -1,0 +1,126 @@
+.hero {
+  position: relative;
+  flex: 1;
+  min-height: 520px;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+  color: var(--text-primary);
+
+  /* Swap this for background-image: url('/hero-storm.jpg'); once you drop a photo
+     into client/public/. The gradient below is a placeholder storm-sky look. */
+  background-image: radial-gradient(circle at 75% 20%, rgba(255, 255, 255, 0.18), transparent 40%),
+    linear-gradient(180deg, #1b2b2c 0%, #24393a 35%, #2e4a45 65%, #3c5c4d 100%);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 14, 15, 0.15) 0%, rgba(6, 14, 15, 0.05) 40%, rgba(6, 14, 15, 0.55) 100%);
+  pointer-events: none;
+}
+
+.hero-top {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  margin-bottom: 18px;
+}
+
+.hero-headline {
+  margin: 0 0 14px;
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.hero-description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 360px;
+}
+
+.hero-strip {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.hero-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 6px;
+  border-radius: 16px;
+  flex: 1;
+  transition: background 0.15s ease;
+}
+
+.hero-day-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.hero-day-temp {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.hero-day-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.hero-day-name {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.hero-day.is-active {
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(6px);
+}
+
+.hero-day.is-active .hero-day-temp {
+  font-size: 22px;
+}
+
+.hero-day.is-active .hero-day-name {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .hero-headline {
+    font-size: 32px;
+  }
+
+  .hero-strip {
+    overflow-x: auto;
+  }
+}
