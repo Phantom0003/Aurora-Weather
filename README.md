@@ -254,33 +254,6 @@ npm audit fix
 These warnings usually don't stop the application from working.
 
 ---
-
-# 📸 Screenshots
-
-## Home Page
-
-```
-Add screenshot here
-```
-
----
-
-## Weather Details
-
-```
-Add screenshot here
-```
-
----
-
-## Forecast
-
-```
-Add screenshot here
-```
-
----
-
 # 📄 License
 
 This project is distributed under the **MIT License**.
